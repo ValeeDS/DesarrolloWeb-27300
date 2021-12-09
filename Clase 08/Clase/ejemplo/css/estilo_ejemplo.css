@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#padre{
+	display: grid;
+	/*grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);*/
+	grid-template-areas: 
+	"uno"
+	"dos"
+	"tres";/**/
+	grid-gap: 2rem;
+	min-height: 80vh;
+	width: 90%;/**/
+	margin: auto;
+	padding-top: 2rem;
+}
+@keyframes anima{
+	0%{
+		background-position: 5% 0%;
+	}
+	50%{
+		background-position: 96% 100%;
+	}
+	100%{
+		background-position: 5% 0%;
+	}
+}
+.uno{
+	grid-area: uno;
+	animation: anima 42s linear infinite; 
+	background: linear-gradient(114.34deg, #106CE6 0%, #645EFF 9.13%, #EF47E1 23.49%, #FF4F40 37.81%, #FF45DE 51.25%, #EBCA40 68.38%, #69C9B2 82.32%, #116DE6 92.08%, #635DFF 100%);
+	background-size: 1000% 1000%;
+}
+.dos{
+	grid-area: dos;
+}
+.tres{
+	grid-area: tres;
+}
+.uno, .dos, .tres{
+	padding: 1.8rem;
+	/*transition: all 200ms ease-in-out;*/
+}
+.bgColorGrey{
+	background-color: #ccc;
+}
+.borders{
+	border:1px solid #000;
+	border-radius: 1.5rem;
+}
+.scale:hover{
+	/*transform: scale(1.1);*/
+}
+
+@media all and (min-width: 768px){
+	#padre{
+		grid-template-areas: 
+		"uno dos"
+		"uno tres";/**/
+		width: 50%;/**/
+	}
+}

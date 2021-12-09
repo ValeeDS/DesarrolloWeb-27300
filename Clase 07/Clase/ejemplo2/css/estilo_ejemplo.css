@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#padre{
+	display: grid;
+	/*grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);*/
+	grid-template-areas: 
+	"uno"
+	"dos"
+	"tres";/**/
+	grid-gap: 2rem;
+	min-height: 80vh;
+	width: 90%;/**/
+	margin: auto;
+}
+.uno{
+	grid-area: uno;
+	display: flex;
+	flex-direction: row;
+	/*flex-wrap: wrap;*/
+	align-items: center;
+	justify-content: center;
+}
+.dos{
+	grid-area: dos;
+}
+.tres{
+	grid-area: tres;
+	background-image: url('../assets/escritorio.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.uno, .dos, .tres{
+	padding: 1.8rem;
+}
+.bgColorGrey{
+	background-color: #ccc;
+}
+.borders{
+	border:1px solid #000;
+	border-radius: 1.5rem;
+}
+
+
+@media all and (min-width: 768px){
+	.tres{
+		background-image: url('../assets/homeoffice.jpg');
+	}
+	#padre{
+		grid-template-areas: 
+		"uno dos"
+		"uno tres";/**/
+		width: 50%;/**/
+	}
+}

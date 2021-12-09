@@ -1,0 +1,16 @@
+.boxDPR{
+	margin: auto;
+	background-image: url('../img/auto.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	max-width: 540px;
+	min-width: 300px;
+	min-height: 300px;	
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+	.boxDPR{
+		background-image: url('../img/auto@2x.jpg');
+	}
+}

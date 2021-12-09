@@ -1,0 +1,36 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 2rem;
+	background-color: #ccc;
+}
+.titulos{
+	font-size: 1.2rem;
+}
+@media all and (min-width: 768px){
+	.titulos{
+		font-size: 2rem;
+	}
+}
+@media all and (min-width: 768px) and (max-width: 980px){
+	body{
+		background-color: red;
+	}
+	p{
+		color: #fff;
+	}
+}
+
+.imgW100 img{
+	display: block;
+	width: 100%;
+}
+
+.ejemplo-fit img{
+	width: 50%;
+	height: 200px;
+	object-fit: contain;
+}

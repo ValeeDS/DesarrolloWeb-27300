@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+#header{
+	position: fixed;
+	top: 0;
+	left: 10%;
+	width: 80%;
+	height: 100px;
+	background-color: #f0efef;
+	z-index: 1000;
+	border-radius: 0 0 50px 50px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+#header .logo{
+	flex-basis: 150px;
+	padding: 0 50px;
+}
+#header .menu{
+	flex-grow: 1;
+}
+#main{
+	padding-top: 200px;
+	display: grid;
+	grid-template-columns: 4fr 8fr;
+}
+#main .titulo{
+	position: sticky;
+	top: 200px;
+	font-size: 2.5rem;
+	color: #666;
+}
+#main .boxContent{
+	border-radius: 2.5rem;
+	background-color: #000;
+	color: #fff;
+	margin-bottom: 2rem;
+	padding: 2.5rem;
+	min-height: 250px;
+}
+#main .boxContent p{
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+.simulado{
+	min-height: 50vh;
+}
+#footer{
+	background-color: #444;
+	margin-top: 15rem;
+	color: #fff;
+}
+
+.areas{
+	display: grid;
+	grid-template-areas: 
+	"uno tres"
+	"dos tres";
+	min-height: 20vh;
+	grid-gap: 1rem;
+}
+.areas .borderRadio{
+	border-radius: 1.5rem;
+	min-height: 3rem;/*opcional*/
+	padding: 1.5rem;/*opcional*/
+}
+.uno{
+	grid-area: uno;
+	background-color: cyan;
+}
+.dos{
+	grid-area: dos;
+	background-color: magenta;
+}
+.tres{
+	grid-area: tres;
+	background-color: yellow;
+}
+
+/*utilidades*/
+.container{
+	max-width: 1520px;
+	width: 80%;
+	margin: auto;
+}
+.font-weight-bold{
+	font-weight: 700;
+}
+.font-weight-light{
+	font-weight: 300;
+}

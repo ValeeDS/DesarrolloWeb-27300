@@ -1,0 +1,38 @@
+/*.padre:hover{
+	background-color: #000;
+}*/
+.padre{
+
+}
+.color{
+	color: #fff;
+}
+.padre > div{
+	background-color: #000;
+	border-bottom: 2px solid #666;
+}
+/*
+.padre div:last-child{
+	border-top: 2px solid #666;
+}*/
+.padre div:nth-child(4n+2){
+	opacity: .5;
+	color: blue !important;
+}
+.padre div:not(.color){
+	background-color: #ccc;
+}
+.padre div[data-id="15"]{
+	/*color: blue !important;*/
+}
+
+
+input:checked{
+	margin-right: 30px;
+}
+input{
+	display: block;
+}
+form:focus-within{
+	background-color: #ccc;
+}

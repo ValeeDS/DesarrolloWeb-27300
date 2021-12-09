@@ -1,0 +1,17 @@
+#productos{
+	/*va a mejorar en clase 14*/
+	.row{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.col{
+			width: 100%;
+		}
+		.col-6{
+			width: 50%;
+		}
+		.col-12{
+			width: 100%;
+		}
+	}
+}

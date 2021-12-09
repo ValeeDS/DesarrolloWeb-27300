@@ -1,0 +1,37 @@
+/*Esto debo escribirlo en el atributo class aprovechando bootstrap */
+.padre{
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.padre .box{
+	width: 100%;
+}
+
+/*portrait*/
+@media all and (min-width: 768px) and (orientation: landscape){
+	.padre .box{
+		width: 50%;
+	}
+}
+
+.titulo{
+	font-size: 2.5rem;
+	padding: 0 1rem;
+	padding-bottom: 1.5em;
+}
+.subtitulo{
+	font-size: 1.5rem;
+	padding: 0 1rem;
+	padding-bottom: 1.5em;
+}
+@media all and (max-width: 768px){
+	.titulo{
+		font-size: 1.5rem;
+	}
+	.subtitulo{
+		font-size: 1rem;
+	}
+}
+

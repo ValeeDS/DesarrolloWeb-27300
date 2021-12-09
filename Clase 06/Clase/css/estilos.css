@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#contenedor{
+	display: grid;
+	/*grid-template-columns: repeat(5, 100px);
+	grid-template-rows: 100px 100px 100px;
+	*/
+	grid-template-areas: 
+	"nav nav nav"
+	"prod prod ads"
+	"serv . ads"
+	"footer footer footer";
+	grid-column-gap: 1fr;
+	grid-row-gap: 50px;
+	justify-items: start;
+	align-items: end;
+	height: 100vh;/*para el ejemplo*/
+	/*justify-content: start;*/
+}
+.header{
+	grid-area: nav;
+	background-color: yellow;
+	color: #000;
+}
+.productos{
+	grid-area: prod;
+	background-color: green;
+	color: yellow;
+	align-self: stretch;
+	justify-self: stretch;
+}
+.servicios{
+	grid-area: serv;
+	background-color: red;
+	color: #fff;
+}
+.ads{
+	grid-area: ads;
+	background-color: cyan;
+	color: #000;
+}
+.footer{
+	grid-area: footer;
+	background-color: pink;
+	color: magenta;
+}
+.anidandoTeams{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;/*este esta ahora de mas*/
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

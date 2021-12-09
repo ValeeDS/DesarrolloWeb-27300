@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.fixContent{
+	max-width: 1200px;
+	margin: auto;
+}
+.font-weight-medium{
+	font-weight: 500;
+}
+.font-weight-bold{
+	font-weight: 700;
+}
+
+#header{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+#header .navBar{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 75px;
+	background-color: rgb(220,220,220, .8);
+	border-radius: 0 0 50px 50px;
+	transition: all 250ms ease-in-out;
+}
+#header .navBar:hover{
+	background-color: rgb(0,0,0, 1);
+	color: #fff;
+	height: 100px;
+}
+#header .navBar .logo{
+	flex-basis: 180px;
+	padding-left: 50px;
+}
+#header .navBar .logo img{
+	width: 100%;
+	max-width: 180px;
+	display: block;
+}
+#header .navBar .menu{
+	flex-grow: 1;
+}
+@keyframes zoom {
+	from{
+		transform: scale(1,1);
+	}
+	to{
+		transform: scale(1.1,1.1);
+	}
+}
+.banner{
+	height: auto;
+	overflow: hidden;
+}
+@media all and (min-width: 768px){
+	.banner{
+		height: 100vh;
+	}
+}
+.banner img{
+	width: 100%;
+	display: block;
+	animation-name: zoom;
+	animation-timing-function: linear;
+	animation-delay: 0;
+	animation-duration: 7s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+.contenedor{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 3rem 0;
+}
+.contenedor .box{
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #000;
+}
+.contenedor .box img{
+	width: 100%;
+	transition: all 250ms ease-in-out;
+}
+
+@media all and (min-width: 768px){
+	.contenedor .box{
+		width: 25%;
+	}
+	.contenedor .box:hover img{
+		transform: scale(1.1);
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+	}
+}
+.contenedor .box .titulo{
+	font-size: 1.5rem;
+}
+.contenedor .box .detalles{
+	padding: 1rem 5px;
+}
+.contenedor .box .precio{
+	font-size: 1rem;
+	color: #444;
+}
+#footer{
+	min-height: 200px;
+	background: #000;
+}
+
+
+
+
+
+
+
+
+

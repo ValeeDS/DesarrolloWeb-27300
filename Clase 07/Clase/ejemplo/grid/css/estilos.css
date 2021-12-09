@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.padre{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    grid-template-areas:
+        "black ."
+        "black .";
+}
+.black{
+	grid-area: black;
+	background-color: #000;
+	color: #fff;
+}
+
+.doble{
+	grid-column: span 2;
+	background-color: pink;
+}
+.dobleH{
+	grid-row: span 2;
+	background-color: magenta;
+}

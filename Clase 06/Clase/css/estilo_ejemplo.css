@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#padre{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 
+	"uno dos"
+	"uno tres";
+	grid-gap: 2rem;
+	min-height: 80vh;
+	width: 50%;
+	margin: auto;
+}
+.uno{
+	grid-area: uno;
+}
+.dos{
+	grid-area: dos;
+}
+.tres{
+	grid-area: tres;
+}
+.uno, .dos, .tres{
+	padding: 1.8rem;
+}
+.bgColorGrey{
+	background-color: #ccc;
+}
+.borders{
+	border:1px solid #000;
+	border-radius: 1.5rem;
+}

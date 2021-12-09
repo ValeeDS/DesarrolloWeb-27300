@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/*RESETEO Y ESTILOS GENERALES*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  background-color: rgb(252, 222, 183);
+}
+
+/*GALERIA DE FOTOS*/
+.galeria {
+  display: flex;
+  justify-content: center;
+  margin: 3% 0;
+}
+
+.padre {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  grid-template-areas:
+    ". . ."
+    ". central ."
+    ". . .";
+}
+
+.padre img {
+  width: 100%;
+  height: 100%;
+  /* background-size: cover; */
+  object-fit: cover;
+  border: 2px solid rgb(187, 69, 69);
+}
+
+.fotoPrincipal {
+  grid-area: central;
+}
+
+.doble {
+  grid-column: span 2;
+}
+
+.dobleh {
+  grid-row: span 2;
+}

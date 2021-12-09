@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fixed {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+}
+
+.sectionContainer {
+  padding: 20px;
+  background-color: #00ffc3;
+}
+
+@media all and (max-width: 920px) {
+  .sectionContainer {
+    padding: 35px;
+  }
+}
+
+.sectionContainer p {
+  font-size: 1.5rem;
+}
+
+.sectionContainer p span {
+  font-weight: bold;
+}
+
+.sectionContainer a {
+  color: #000;
+  text-decoration: none;
+}
+
+.sectionContainer a::before {
+  content: '-';
+}
+
+.sectionContainer a:hover {
+  color: #1c8b90;
+}
+
+.sectionContainer.bgColor {
+  background-color: #fffb00;
+}
+
+.sectionContainer.bgColor__noticias {
+  background-color: #444;
+}
+
+.sectionContainer.bgColor__noticias--success {
+  background-color: green;
+}
+
+.sectionContainer.bgColor__noticias--error {
+  background-color: red;
+}
+
+.sectionContainer.bgColor--dark {
+  background-color: #000;
+}
+
+@media all and (max-width: 920px) {
+  .sectionContainer.bgColor {
+    background-color: #ccc;
+  }
+}
+
+.sectionContainer .especial {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: .5em .75em;
+}
+
+.sectionContainer h3 {
+  /*este esta ok*/
+}
+
+.sectionContainer h3 {
+  /*No esta anidado*/
+}
+
+#productos {
+  /*va a mejorar en clase 14*/
+}
+
+#productos .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#productos .row .col {
+  width: 100%;
+}
+
+#productos .row .col-6 {
+  width: 50%;
+}
+
+#productos .row .col-12 {
+  width: 100%;
+}
