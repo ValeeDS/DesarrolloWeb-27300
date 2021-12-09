@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'VWHeadWeb-Regular';
+    src:
+        url('fonts/VWHeadWeb-Regular.eot'),
+        url('fonts/VWHeadWeb-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/VWHeadWeb-Regular.woff2') format('woff2'), 
+        url('fonts/VWHeadWeb-Regular.woff') format('woff'), 
+        url('fonts/VWHeadWeb-Regular.ttf')  format('truetype'), 
+        url('fonts/VWHeadWeb-Regular.svg#VWHeadWeb-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: Times;
+}
+
+/*Servicios*/
+.fontVwBold{
+    font-family: 'VWHeadWeb-Regular';
+}
