@@ -1,0 +1,72 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+.container-fixed{
+	width: 100%;
+	max-width: 1140px;
+	margin:auto;
+}
+#header{
+	color: red;
+}
+%cualquierNoClase{
+	position:fixed;
+}
+.sectionContainer{
+	@extend #header;
+	padding: 20px;
+	background-color: #00ffc3;
+	@media all and (max-width: $point-md){
+		padding: 35px;
+	}
+	p{
+		font-size: 1.5rem;
+		span{
+			font-weight: bold;
+		}
+	}
+	a{
+		//@extend %cualquierNoClase;
+		@include cualquierCosa(1rem, yellow);
+		/*Extend & include de ejemplos. ( no aplica nada )*/
+		text-decoration: none;
+		&::before{
+			content: '-';
+		}
+		&:hover{
+			color: #1c8b90;
+		}
+	}
+	&.bgColor{
+		background-color: $bgColor;
+		&__noticias{
+			background-color: #444;
+			&--success{
+				background-color: green;
+			}
+			&--error{
+				background-color: red;
+			}
+		}
+		&--dark{
+			background-color: $bgColorDark;
+		}
+		@media all and (max-width: $point-md){
+			background-color: #ccc;
+		}
+	}
+	.especial{
+		display: inline-block;
+		font-size: 1.2rem;
+		padding: .5em .75em;
+	}
+	h3{
+		//font-weight: map-get($miMap, light);
+		/*este esta ok*/
+	}
+}
+.sectionContainer h3{
+	/*No esta anidado*/
+}

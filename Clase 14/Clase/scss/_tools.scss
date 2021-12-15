@@ -1,0 +1,41 @@
+@mixin cualquierCosa($fontSize,$colorPrincipal: #fff){
+	color: $colorPrincipal;
+	font-size: $fontSize;
+}
+
+@mixin flexbox($direccion: row){
+	display: flex;
+	@if $direccion == row{
+		flex-direction: row;
+	}@else{
+		flex-direction: column;
+	}
+	@if $gradientes{
+		background: red;
+	}
+}
+
+@mixin fondosImagen($imagen){
+	background-image: url("#{$base}#{$imagen}");
+	background-position: center;
+	background-size: cover;
+}
+
+@each $k, $v in $miMap{
+	.font-weight-#{$k}{
+		font-weight: $v;
+	}
+}
+
+@each $c in red, green, blue, yellow, black{
+	.color-#{$c}{
+		color: $c;
+	}
+}
+
+.contenedor{
+	@include flexbox;
+}
+.contenedorColumna{
+	@include flexbox(column);
+}

@@ -1,0 +1,6 @@
+
+@each $k, $v in $font-weights{
+	.font-weight-#{$k}{
+		font-weight: $v;
+	}
+}

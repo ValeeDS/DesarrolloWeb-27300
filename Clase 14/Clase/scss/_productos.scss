@@ -1,0 +1,19 @@
+#productos{
+	/*va a mejorar en clase 14*/
+	.row{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		@for $i from 1 through 12{
+			.col-#{$i}{
+				width: (100% / 12) * $i;
+			}
+		} 
+	}
+	.escritorio{
+		@include fondosImagen('escritorio.jpg');
+	}
+	.oficina{
+		@include fondosImagen('homeoffice.jpg');
+	}
+}

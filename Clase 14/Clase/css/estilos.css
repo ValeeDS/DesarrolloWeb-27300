@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+.font-weight-light {
+  font-weight: 300;
+}
+
+.font-weight-normal {
+  font-weight: 400;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-yellow {
+  color: yellow;
+}
+
+.color-black {
+  color: black;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: row;
+}
+
+.contenedorColumna {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fixed {
+  width: 100%;
+  max-width: 1140px;
+  margin: auto;
+}
+
+#header, .sectionContainer {
+  color: red;
+}
+
+.sectionContainer {
+  padding: 20px;
+  background-color: #00ffc3;
+}
+
+@media all and (max-width: 920px) {
+  .sectionContainer {
+    padding: 35px;
+  }
+}
+
+.sectionContainer p {
+  font-size: 1.5rem;
+}
+
+.sectionContainer p span {
+  font-weight: bold;
+}
+
+.sectionContainer a {
+  color: yellow;
+  font-size: 1rem;
+  /*Extend & include de ejemplos. ( no aplica nada )*/
+  text-decoration: none;
+}
+
+.sectionContainer a::before {
+  content: '-';
+}
+
+.sectionContainer a:hover {
+  color: #1c8b90;
+}
+
+.sectionContainer.bgColor {
+  background-color: #fffb00;
+}
+
+.sectionContainer.bgColor__noticias {
+  background-color: #444;
+}
+
+.sectionContainer.bgColor__noticias--success {
+  background-color: green;
+}
+
+.sectionContainer.bgColor__noticias--error {
+  background-color: red;
+}
+
+.sectionContainer.bgColor--dark {
+  background-color: #000;
+}
+
+@media all and (max-width: 920px) {
+  .sectionContainer.bgColor {
+    background-color: #ccc;
+  }
+}
+
+.sectionContainer .especial {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: .5em .75em;
+}
+
+.sectionContainer h3 {
+  /*este esta ok*/
+}
+
+.sectionContainer h3 {
+  /*No esta anidado*/
+}
+
+#productos {
+  /*va a mejorar en clase 14*/
+}
+
+#productos .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#productos .row .col-1 {
+  width: 8.33333%;
+}
+
+#productos .row .col-2 {
+  width: 16.66667%;
+}
+
+#productos .row .col-3 {
+  width: 25%;
+}
+
+#productos .row .col-4 {
+  width: 33.33333%;
+}
+
+#productos .row .col-5 {
+  width: 41.66667%;
+}
+
+#productos .row .col-6 {
+  width: 50%;
+}
+
+#productos .row .col-7 {
+  width: 58.33333%;
+}
+
+#productos .row .col-8 {
+  width: 66.66667%;
+}
+
+#productos .row .col-9 {
+  width: 75%;
+}
+
+#productos .row .col-10 {
+  width: 83.33333%;
+}
+
+#productos .row .col-11 {
+  width: 91.66667%;
+}
+
+#productos .row .col-12 {
+  width: 100%;
+}
+
+#productos .escritorio {
+  background-image: url("../assets/escritorio.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#productos .oficina {
+  background-image: url("../assets/homeoffice.jpg");
+  background-position: center;
+  background-size: cover;
+}
