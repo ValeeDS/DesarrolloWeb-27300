@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 2rem;
+	background-color: #000;
+	color: white;
+}
+
+@media all and (min-width: 768px) and (max-width: 980px){
+	body{
+		background-color: red;
+		color: green;
+	}
+}

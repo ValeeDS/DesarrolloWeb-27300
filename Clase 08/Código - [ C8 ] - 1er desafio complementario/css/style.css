@@ -1,0 +1,396 @@
+/* css general */
+*{
+	margin: 0;
+	padding: 0;
+}
+.imgFluid{
+	width: 100%;
+	height: auto;
+}
+
+/*li{
+	padding: 20px;
+	list-style: none;
+	background-color: lightblue;
+	border-radius: 5px;
+	margin: 0px 10px;
+	display: inline;
+}*/
+a{
+	font-size: 20px;
+	text-decoration: none;
+}
+/* nosotros */
+
+/* grid */ 
+
+.gridContainerNosotros{
+	display: grid; /* propiedad que habilita aplicar grids */
+	grid-template-columns: 100%; /* prop que establece ancho: px, fr, % */
+	grid-template-rows: 100px 200px 100px; /* prop que estable alto: px, fr, auto */
+	grid-column-gap: 20px; /* prop que genera espacio entre columnas */
+	grid-row-gap: 50px; /* prop que genera espacio entre filas */
+}
+
+.border{
+	border: 1px solid black;
+}
+
+/* galeria */
+
+.gridContainerGaleria{
+	display: grid;
+	grid-template-areas: 
+	"navIzq logo navDer"
+	"carousel carousel carousel"
+	"encabezado encabezado encabezado"
+	"galeria galeria galeria"
+	"footer footer footer";
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-columns: 33.33% 33.33% 33.33%;
+	grid-row-gap: 50px;
+}
+.navIzq{grid-area: navIzq;}
+.logo{grid-area: logo;}
+.navDer{grid-area: navDer;}
+.carousel{grid-area: carousel;}
+.encabezado{grid-area: encabezado;}
+#galeria{grid-area: galeria;}
+footer{grid-area: footer;}
+
+.gridGaleria{
+	display: grid;
+	grid-template-areas: 
+	"img1 img1 img2"
+	"img3 img4 img5"
+	"img6 img7 img5";
+	grid-template-columns: 33.33% 33.33% 33.33%;
+	grid-template-rows: auto auto auto;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+}
+.img1{grid-area: img1;}
+.img2{grid-area: img2;}
+.img3{grid-area: img3;}
+.img4{grid-area: img4;}
+.img5{grid-area: img5;}
+.img6{grid-area: img6;}
+.img7{grid-area: img7;}
+
+.flexEncabezado{
+	display: flex;
+	justify-content: center;
+}
+.flexFooter{
+	display: flex;
+	justify-content: space-around;
+}
+.paddingTB{
+	padding: 50px 0;
+}
+.navFlexGaleria{
+	display: flex;
+	justify-content: center;
+}
+/* vista desktop */
+@media only screen and (min-width: 1024px){
+
+/* index */
+body{
+	background-color: yellow;
+}
+
+.gridContainer{
+	display: grid;
+	grid-template-areas:
+	"logo nav nav nav nav nav"
+	"section section section section section section"
+	"footer footer footer footer footer footer";
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: auto auto auto;
+}
+
+header {
+	grid-area: logo;
+}
+nav {
+	grid-area: nav;
+}
+section {
+	grid-area: section;
+}
+footer {
+	grid-area: footer;
+}
+
+.navFlex{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	position: relative;
+	top: 10px;
+}
+.footerFlex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+}
+
+/* vista tablet */
+
+@media only screen and (min-width: 768px) and (max-width:1023px){
+	/* index */
+body{
+	background-color: green;
+}
+
+.gridContainer{
+	display: grid;
+	grid-template-areas:
+	"logo nav nav nav nav nav"
+	"section section section section section section"
+	"footer footer footer footer footer footer";
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: auto auto auto;
+}
+
+header {
+	grid-area: logo;
+}
+nav {
+	grid-area: nav;
+}
+section {
+	grid-area: section;
+}
+footer {
+	grid-area: footer;
+}
+
+.navFlex{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+
+}
+.footerFlex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+p{font-size: 20px;color: black;}
+
+}
+
+/* vista mobile */
+
+@media only screen and (max-width: 767px){
+
+/* index */
+body{
+	background-color: orange;
+}
+
+.gridContainer{
+	display: grid;
+	grid-template-areas:
+	"logo logo logo"
+	"nav nav nav"
+	"section section section"
+	"footer footer footer ";
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto auto auto auto;
+}
+
+header {
+	grid-area: logo;
+}
+nav {
+	grid-area: nav;
+}
+section {
+	grid-area: section;
+}
+footer {
+	grid-area: footer;
+}
+
+.navFlex{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.footerFlex{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+p{font-size:18px;color: blue;}
+.itemHijo3,.itemHijo4{display: none;}
+
+/* galeria */
+li{
+	list-style: none;
+	
+}
+.gridContainerGaleria{
+	display: grid;
+	grid-template-areas: 
+	"logo logo"
+	"navIzq navDer"
+	"carousel carousel"
+	"encabezado encabezado"
+	"galeria galeria"
+	"footer footer";
+	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-columns: 50% 50%;
+	grid-row-gap: 50px;
+}
+.navIzq{grid-area: navIzq;}
+.logo{grid-area: logo;}
+.navDer{grid-area: navDer;}
+.carousel{grid-area: carousel;}
+.encabezado{grid-area: encabezado;}
+#galeria{grid-area: galeria;}
+footer{grid-area: footer;}
+
+.gridGaleria{
+	display: grid;
+	grid-template-areas: 
+	"img1"
+	"img2"
+	"img3"
+	"img4"
+	"img5"
+	"img6"
+	"img7";
+	grid-template-columns: 100%;
+	grid-template-rows: auto auto auto auto auto auto auto;
+	grid-column-gap: 5px;
+	grid-row-gap: 5px;
+}
+.img1{grid-area: img1;}
+.img2{grid-area: img2;}
+.img3{grid-area: img3;}
+.img4{grid-area: img4;}
+.img5{grid-area: img5;}
+.img6{grid-area: img6;}
+.img7{grid-area: img7;}
+
+.flexEncabezado{
+	display: flex;
+	justify-content: center;
+}
+.flexFooter{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.paddingTB{
+	padding: 50px 0;
+}
+.navFlexGaleria{
+	display: flex;
+	justify-content: center;
+}
+
+}
+.gradiante{
+	background:linear-gradient(rgba(0,0,0,1),rgba(0,0,0,.5),rgba(0,0,0,.1));
+}
+.gradianteFooter{
+	background: radial-gradient(ellipse, blue, yellow, red, #fff);
+}
+.translate{
+	transform: translate(20px, 50px); /* propiedad para trasladar sin position los elementos sobre el eje de las X (primer valor) y sobre la Y (segundo valor) */
+
+}
+
+.translateY{
+	transform: translateY(100px);
+}
+
+.rotate{
+	transform: rotateX(45deg);
+}
+.scale{
+	transform: scale(2,2);
+}
+
+.skew{
+	transform: skew(20deg);
+}
+
+.borderRadius{
+	border-radius: 100%;
+}
+
+.rectangulo{
+	width: 200px;
+	background-color: blue;
+	color: white;
+	text-align: center;
+	transition: all 2s;
+}
+
+.rectangulo:hover{
+	width: 400px;
+	height: auto;
+	background-color: red;
+	color: black;
+	text-align: left;
+	padding: 10px;
+}
+
+.icoHover{
+	transition: all 2s;
+}
+
+.icoHover:hover{
+	transform: translateY(-20px);
+}
+input{
+	display: block;
+	width: 100px;
+	transition: all 1s;
+}
+input:focus{
+	width: 200px;
+	font-size: 24px;
+}
+
+@keyframes moverElemento {
+	0%{width: 400px;transform: translate(50px,60px);}
+	50%{width: 1000px;transform: rotate(180deg);background: linear-gradient(red,blue);}
+	100%{width: 500px;transform: translateY(100px);background-color: green;}
+}
+
+.animacion{
+	width: 100px;
+	height: 300px;
+	background-color: orange;
+	animation-name: moverElemento;
+	animation-duration: 2s;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+}
+
+@keyframes moverElemento2 {
+	0%{width: 400px;transform: translate(50px,60px);}
+	50%{width: 1000px;transform: rotate(180deg);background: linear-gradient(red,blue);}
+	100%{width: 500px;transform: translateY(100px);background-color: green;}
+}
+
+.animacion2{
+	width: 100px;
+	height: 300px;
+	background-color: orange;
+	animation-name: moverElemento;
+	animation-duration: 2s;
+	animation-delay: 0;
+	animation-iteration-count: 2;
+	animation-timing-function: ease-in;
+}
